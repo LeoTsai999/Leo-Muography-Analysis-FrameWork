@@ -3,6 +3,7 @@
 ## ScintillatorClass
 此檔案包含一Class用以建立閃爍體物件。利用此Class建立的閃爍體物件，僅能從GeneralID建立。此類別包含五種方法：
 - GetID()
+
   回傳此閃爍體的GenID
 - GetInfo()         
   以tuple回傳此閃爍體的(GenID, 中心x座標, 中心y座標, 中心ｚ座標, LayerID)
