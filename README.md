@@ -27,8 +27,15 @@
   - L4 第一層的高度（以中心座標z來算）
 
 ## 002_CombinationMaker
+此檔案負責進行數值模擬，計算所有可能的觸發組合。方法為在第四層閃爍體的上表面和第一層閃爍體的下表面選超多點然後逐組合連線，當成muon ray。
+函式main()中可以設定xrange和yrange, 指定掃描點範圍。
+函式process_point_pair(start_point, end_points, scintillators)中可設定掃描終點與起點（也就是muon ray的起點和終點）
 
+- V1_3  
+結果被儲存為configs.npy和configs.csv。其形狀為N*256的陣列，N為觸發組合數。每一個觸發組合皆由256個布林值構成，以True代表被觸發的閃爍體。例如某config的第0, 5, 10個元素為True，表示GenID 0, 5, 10 閃爍體被觸發。
 
+- V1_4
+  不再儲存configs.npy和configs.csv。取而代之儲存configs.pkl。該物件為一個pandas dataframe。內包含configID_abs和config。
 
 
 ## 003_FromAbsoluteToTrlativeConfigs
